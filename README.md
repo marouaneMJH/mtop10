@@ -54,7 +54,7 @@ Frontend (Vite + React)     Backend (Express + Node.js)     Database
 
 ```bash
 git clone https://github.com/marouaneMJH/mtop10
-cd top10
+cd mtop10
 ```
 
 ### 2. Run with Make (Recommended)
