@@ -53,7 +53,7 @@ Frontend (Vite + React)     Backend (Express + Node.js)     Database
 ### 1. Clone & Setup
 
 ```bash
-git clone <your-repo>
+git clone https://github.com/marouaneMJH/mtop10
 cd top10
 ```
 
