@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 6%;        /* Dark background #0a0a0f */
+    --foreground: 0 0% 95%;          /* Off-white text */
+
+    --card: 210 20% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 210 20% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 193 100% 50%;         /* Electric cyan #00d4ff */
+    --primary-foreground: 210 20% 6%;
+
+    --secondary: 210 20% 12%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 210 20% 12%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 193 100% 50%;
+    --accent-foreground: 210 20% 6%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 210 20% 18%;
+    --input: 210 20% 18%;
+    --ring: 193 100% 50%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 210 20% 6%;
+    --foreground: 0 0% 95%;
+
+    --card: 210 20% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 210 20% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 193 100% 50%;
+    --primary-foreground: 210 20% 6%;
+
+    --secondary: 210 20% 12%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 210 20% 12%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 193 100% 50%;
+    --accent-foreground: 210 20% 6%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 210 20% 18%;
+    --input: 210 20% 18%;
+    --ring: 193 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Syne', ui-sans-serif, system-ui, sans-serif;
+  }
+  
+  /* Custom scrollbar for dark theme */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--accent));
+  }
+}
+
+/* Custom track row hover effects */
+.track-row {
+  @apply transition-all duration-200 ease-in-out;
+  @apply hover:-translate-y-[1px] hover:bg-secondary/50;
+}
+
+.track-row.active {
+  @apply border-l-2 border-l-primary bg-primary/5;
+}
+
+/* Progress bar custom styles */
+.progress-bar {
+  @apply bg-primary;
+}
+
+/* Frosted glass effect for player */
+.frosted-glass {
+  backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.7);
+}
